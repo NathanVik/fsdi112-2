@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Message List{% endblock title %}
+
+
+{% block content %}
+    <h1>Message Board Homepage</h1>
+
+    <ul>
+        {% for post in post_list %}
+            <div class="card w-75" style="padding: 5px;">
+                <div class="card-body">
+                  <h5 class="card-title">Post # {{ post.id }}</h5>
+                  <p class="card-text">{{ post.text | truncatechars:8}}</p>
+                  <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Details</a>
+                </div>
+              </div>
+
+        {% endfor %}
+    </ul>
+{% endblock content %}
