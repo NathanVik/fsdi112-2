@@ -14,3 +14,7 @@
 
 # To Start Server:
  ~$ python3 manage.py runserver
+
+# Heroku Host Location:
+
+https://shielded-harbor-05642.herokuapp.com/
